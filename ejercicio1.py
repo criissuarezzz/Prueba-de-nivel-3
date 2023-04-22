@@ -46,4 +46,7 @@ print("El superhéroe recomendado es:", superheroe)
 #imprimir el arbol en la terminal
 
 
-
+if __name__ == "__main__":
+    arbol = ArbolDecision()
+    superheroe = arbol.obtener_superheroe(arbol.raiz)
+    print("El superhéroe recomendado es:", superheroe)
