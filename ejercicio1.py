@@ -27,4 +27,15 @@ class ArbolDecision:
         pregunta_etica = Nodo(pregunta="¿Tiene una ética incorruptible?", izquierda=capitan_america, derecha=capitana_marvel)
         pregunta_recuperacion = Nodo(pregunta="¿Es bueno en misiones de recuperación?", izquierda=winter_soldier, derecha=pregunta_lider)
 
-       
+        # El nodo raíz es la primera pregunta
+        self.raiz = pregunta_recuperacion
+
+    def obtener_superheroe(self, nodo):
+        if nodo.superheroe:
+            return nodo.superheroe
+        else:
+            respuesta = input(nodo.pregunta + " ")
+            if respuesta.lower() == "si":
+                return self.obtener_superheroe(nodo.izquierda)
+            else:
+                return self.obtener_superheroe(nodo.derecha)
