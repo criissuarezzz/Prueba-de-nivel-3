@@ -39,3 +39,11 @@ class ArbolDecision:
                 return self.obtener_superheroe(nodo.izquierda)
             else:
                 return self.obtener_superheroe(nodo.derecha)
+
+arbol = ArbolDecision()
+superheroe = arbol.obtener_superheroe(arbol.raiz)
+print("El superhéroe recomendado es:", superheroe)
+#imprimir el arbol en la terminal
+
+
+
