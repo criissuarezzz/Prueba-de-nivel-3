@@ -34,4 +34,19 @@ class Operaciones:
             print("Error: División entre cero")
         except TypeError:
             print("Error: Tipo de dato no válido")
-            
+
+class Nodo:
+    def __init__(self, operacion, siguiente=None):
+        self.operacion = operacion
+        self.siguiente = siguiente
+    
+    def obtener_operacion(self):
+        print("La operación es: ", self.operacion)
+
+    def obtener_siguiente(self):
+        return self.siguiente
+    
+    def asignar_siguiente(self, siguiente):
+        self.siguiente = siguiente
+        
+    
