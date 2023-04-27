@@ -16,5 +16,22 @@ class Operaciones:
             return result
         except TypeError:
             print("Error: Tipo de dato no válido")
+    
+    def producto(self):
+        try:
+            result= self.num1 * self.num2
+            return result
+        except TypeError:
+            print("Error: Tipo de dato no válido")
 
+    def division(self):
+        try:
+            if self.num2==0:
+                raise ZeroDivisionError
+            result= self.num1 / self.num2
+            return result
+        except ZeroDivisionError:
+            print("Error: División entre cero")
+        except TypeError:
+            print("Error: Tipo de dato no válido")
             
