@@ -70,23 +70,26 @@ class ListaEnlazada:
         return nodo_eliminado.obtener_operacion()
     
 
+
 operacion1=Operaciones(10, 5)
-operacion2=Operaciones(5, 0)
-operacion3=Operaciones(3, "hola") 
+operacion2=Operaciones(5, "hola")
+operacion3=Operaciones(5, 5) 
+operacion4=Operaciones(10, 0)
 
 lista=ListaEnlazada()
 
 resultado_suma=operacion1.suma()
-resultado_resta=operacion1.resta()
-resultado_producto=operacion1.producto()
-resultado_division=operacion2.division()
-resultado_division2=operacion3.division()
+resultado_resta=operacion2.resta()
+resultado_producto=operacion3.producto()
+resultado_division=operacion4.division()
 
-print("El resultado de la suma entre los valores 10 y 5 es: ", resultado_suma)
-print("El resultado de la resta entre los valores 10 y 5 es: ", resultado_resta)
-print("El resultado del producto entre los valores 10 y 5 es: ", resultado_producto)
-print("El resultado de la división entre los valores 5 y 0 es: ", resultado_division)
-print("El resultado de la división entre los valores 3 y 'hola' es: ", resultado_division2)
+print("{} + {} = {}".format(operacion1.num1, operacion1.num2, resultado_suma))
+print("{} - {} = {}".format(operacion2.num1, operacion2.num2, resultado_resta))
+print("{} * {} = {}".format(operacion3.num1, operacion3.num2, resultado_producto))
+print("{} / {} = {}".format(operacion4.num1, operacion4.num2, resultado_division))
+
+
+
 
 lista.agregar(operacion1)
 lista.agregar(operacion2)
