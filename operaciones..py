@@ -48,5 +48,25 @@ class Nodo:
     
     def asignar_siguiente(self, siguiente):
         self.siguiente = siguiente
-        
+
+class ListaEnlazada: 
+    def __init__(self):
+        self.primero=None
+
+    def esta_vacia(self):
+        return self.primero==None
+    
+    def agregar(self, operacion):
+        nuevo_nodo=Nodo(operacion)
+        nuevo_nodo.asignar_siguiente(self.primero)
+        self.primero=nuevo_nodo
+
+    def eliminar(self):
+        if self.primero==None:
+            print("La lista está vacía")
+            return None
+        nodo_eliminado=self.primero
+        self.primero=self.primero.obtener_siguiente()
+        return nodo_eliminado.obtener_operacion()
+    
     
