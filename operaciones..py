@@ -10,4 +10,11 @@ class Operaciones:
         except TypeError:
             print("Error: Tipo de dato no válido")
 
-                
+    def resta(self):
+        try:
+            result= self.num1 - self.num2
+            return result
+        except TypeError:
+            print("Error: Tipo de dato no válido")
+
+            
