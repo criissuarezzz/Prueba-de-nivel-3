@@ -1,0 +1,18 @@
+@startuml
+|Main flow|
+start
+
+if (¿El pedido proviene del Gran Conquistador?) then (yes)
+  :Atender con máxima prioridad;
+elseif (¿El pedido proviene del Khan que todo lo sabe o es del universo 838 o la descripción menciona "Carnicero de Dioses"?) then (yes)
+  :Atender con prioridad media;
+else (no)
+  :Descartar por baja prioridad;
+endif
+
+while (¿Desea agregar un nuevo pedido?) is (yes)
+  :Agregar pedido a la cola;
+endwhile
+
+stop
+@enduml
