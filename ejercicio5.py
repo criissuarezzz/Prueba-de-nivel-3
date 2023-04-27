@@ -204,8 +204,8 @@ if __name__=='__main__':
         print('Es AVL:', arbol.es_avl())
         print('----------------------')
 
-    op=input("que elemento quieres ver si esta en el arbol?")
-    print(arbol.buscar(op))
+    op=int(input("que elemento quieres ver si esta en el arbol?"))
+    print("El elemento", op, "está en el arbol:", arbol.buscar(op))
     arbol.barrido_por_nivel()
     print("Altura del arbol:",arbol.altura())
     print("Altura del subarbol izquierdo:",arbol.altura_subarbol_izquierdo())
@@ -215,5 +215,5 @@ if __name__=='__main__':
     print("Es AVL:",arbol.es_avl())
     print("Eliminar elemento:",op)
     arbol.eliminar(op)
-
+    arbol.barrido_por_nivel()
 
